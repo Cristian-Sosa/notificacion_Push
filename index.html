@@ -106,7 +106,7 @@
         let textoFinal = '';
 
         items.forEach((item) => {
-          textoFinal += `${item.nombre} ${item.cantidades}u \n`;
+          textoFinal += `<p style="display: block; text-align: center;">${item.nombre} <i>${item.cantidades}u</i></p> \n`;
         });
 
         let printButton = document.querySelector("#print");
