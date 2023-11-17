@@ -69,7 +69,11 @@
       let progress = document.querySelector('.progress');
       let dialog = document.querySelector('#dialog');
       // let message = document.querySelector('#message');
-      let message = document.querySelector('#printable');
+      // let message = document.querySelector('#printable');
+      let listItems = document.querySelectorAll('li');
+
+      let listElements = Array.from(message).map(item => item.textContent).join('\n')
+
       let printButton = document.querySelector('#print');
       let printCharacteristic;
       let index = 0;
@@ -87,7 +91,8 @@
         // Get the bytes for the text
         let encoder = new TextEncoder("utf-8");
         // Add line feed + carriage return chars to text
-        let text = encoder.encode(message + '\u000A\u000D');
+        // let text = encoder.encode(HTMLDataListElement<message> + '\u000A\u000D');
+        let text = encoder.encode(listElements + '\u000A\u000D');
         return printCharacteristic.writeValue(text).then(() => {
           console.log('Write done.');
           console.log(message)
