@@ -95,7 +95,7 @@
         let text = encoder.encode(listElements + '\u000A\u000D');
         return printCharacteristic.writeValue(text).then(() => {
           console.log('Write done.');
-          console.log(message)
+          console.log(listElements)
         });
       }
 
