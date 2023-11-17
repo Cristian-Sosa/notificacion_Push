@@ -51,6 +51,14 @@
     </div>
   </div>
 
+  <ul class="list-group" id="printable">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
+  </ul>
+
   <!-- Bootstrap JS and dependencies -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -60,7 +68,8 @@
     document.addEventListener('DOMContentLoaded', function() {
       let progress = document.querySelector('.progress');
       let dialog = document.querySelector('#dialog');
-      let message = document.querySelector('#message');
+      // let message = document.querySelector('#message');
+      let message = document.querySelector('#printable').innerHTML;
       let printButton = document.querySelector('#print');
       let printCharacteristic;
       let index = 0;
